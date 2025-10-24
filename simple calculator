@@ -1,0 +1,48 @@
+#Ankit Simple Calculator Program
+
+print("===== Simple Calculator =====")
+
+# Take input from the user
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+# Display operation menu
+print("\nSelect Operation:")
+print("1. Addition (+)")
+print("2. Subtraction (-)")
+print("3. Multiplication (*)")
+print("4. Division (/)")
+print("5. Modulus (%)")
+print("6. Exponentiation (**)")
+choice = input("\nEnter your choice (1-6): ")
+
+# Perform calculation
+if choice == '1' or choice == '+':
+    result = num1 + num2
+    print(f"Result: {num1} + {num2} = {result}")
+
+elif choice == '2' or choice == '-':
+    result = num1 - num2
+    print(f"Result: {num1} - {num2} = {result}")
+
+elif choice == '3' or choice == '*':
+    result = num1 * num2
+    print(f"Result: {num1} × {num2} = {result}")
+
+elif choice == '4' or choice == '/':
+    if num2 != 0:
+        result = num1 / num2
+        print(f"Result: {num1} ÷ {num2} = {result}")
+    else:
+        print("Error: Division by zero is not allowed!")
+
+elif choice == '5' or choice == '%':
+    result = num1 % num2
+    print(f"Result: {num1} % {num2} = {result}")
+
+elif choice == '6' or choice == '**':
+    result = num1 ** num2
+    print(f"Result: {num1} ** {num2} = {result}")
+
+else:
+    print("Invalid Input! Please enter a valid choice (1-6).")
